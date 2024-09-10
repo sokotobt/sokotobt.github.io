@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Wrold</title>
+    <title>My Simple Website</title>
     <style>
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Light gray background */
-            color: #333; /* Dark gray text for contrast */
+            color: white;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 30s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         header {
             text-align: center;
@@ -21,13 +31,15 @@
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
+            flex-grow: 1;
         }
         footer {
             text-align: center;
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
             width: 100%;
+        }
+        h1, h2, footer p {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
     </style>
 </head>
